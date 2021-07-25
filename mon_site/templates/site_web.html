@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+{% load static %}
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Merlin HTML/CSS template">
+    <meta name="author" content="Hasan Alibegic">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>JB</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" async defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" async defer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" async defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async defer>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" async defer>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="loader">
+        <div class="loading"></div>
+    </div>
+    <section id="home" class="page overlay">
+        <div class="container">
+            <div class="content cover text-center">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="mt-0 mb-4 animated hiding" data-animation="fadeInDown" data-delay="300">Les projets</h1>
+                        <a class="mt-0 mb-4 btn btn-blue" 
+                        data-animation="fadeIn" data-delay="900" href="https://github.com/JeanBaptisteServais">Github</a>
+                        <h3 class="mt-0 mb-0 animated hiding" data-animation="fadeIn" data-delay="600"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'layout/navebarre.html' %}
+    {% include 'layout/second_nav_fichier.html' %}
+    <section id="work" class="page">
+        <div class="container">
+            <div class="content text-center">
+                <div class="heading">
+                    <h2 class="mt-0 mb-4">Mes sites web</h2>
+                    <div class="border"></div>
+                    <p class="mt-4 mb-0">
+                        <center>
+                            <ol style="width:40%;">
+                                <li>Mise en forme des documents Uml.</li>
+                                <li>Récupérer templates déjà faits ou création.</li>
+                                <li>Mise en forme des urls - models - formes.</li>
+                                <li>Création des applications python.</li>
+                                <li>Squelette des pages et stylisation.</li>
+                                <li>Test unitaire et mise en forme pep8.</li>
+                                <li>Intégration serveur.</li>
+                                <li>SAV.</li>
+                            </ol>
+                        </center>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="portfolio">
+                            <ul class="filters list-inline">
+                                <li class="list-inline-item">
+                                    <a class="active" data-filter="*" href="#"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a data-filter=".photography" href="#"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a data-filter=".branding" href="#"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a data-filter=".web" href="#"></a>
+                                </li>
+                            </ul>
+                            <ul class="items list-unstyled clearfix animated hiding mb-0" data-animation="fadeInRight">
+                                <li class="item branding">
+                                    <a href="" data-gall="" data-vbtype="" 
+                                        onclick="presentation_projeft('myprofil_mypollution')">
+                                        <img src="{% static 'img/work/site_web/a.png' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Le magasine virtuel</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                    <a href="work.html" data-gall="work" data-vbtype="ajax"
+                                    onclick="presentation_projeft('openfoodfact')">
+                                        <img src="{% static 'img/work/site_web/b.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>openfoodfact</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item branding">
+                                    <a href="work.html" data-gall="work" data-vbtype="ajax"
+                                    onclick="presentation_projeft('degain')">
+                                        <img src="{% static 'img/work/site_web/c.jpg' %}" alt="">
+                                        <div class="overlay">
+                                            <span>Dégain ta frip</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                    <a href="work.html" data-gall="work" data-vbtype="ajax"
+                                    onclick="presentation_projeft('tea')">
+                                        <img src="{% static 'img/work/site_web/d.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Dégain ton thé</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                    <a href="work.html" data-gall="work" data-vbtype="ajax"
+                                    onclick="presentation_projeft('chiro')">
+                                        <img src="{% static 'img/work/site_web/e.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>ristoranté</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item web">
+                                    <a href="work.html" data-gall="work" data-vbtype="ajax"
+                                    onclick="presentation_projeft('tatoueur')">
+                                        <img src="{% static 'img/work/site_web/f.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Chiropracticien</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                    <a href="work.html" data-gall="work" data-vbtype="ajax"
+                                    onclick="presentation_projeft('fantaisies')">
+                                        <img src="{% static 'img/work/site_web/g.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Jm Boyer</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                    <a href="work.html" data-gall="work" data-vbtype="ajax"
+                                    onclick="presentation_projeft('caffe')">
+                                        <img src="{% static 'img/work/site_web/h.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Caffé de Paris</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'layout/contact.html' %}
+    {% include 'layout/footer.html' %}
+    <div id="overlay_picture">
+        <center>
+            <div id="popup_overlay">
+                <div style="height:10vh;"></div>
+                <div id="p_popup"></div>
+            </div>
+        </center>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.2/venobox.min.js"></script>
+    <script src="/static/js/script.js?v=1.0"></script>
+    <script src="/static/js/script.js"></script>
+    <!-- Google Analytics: change UA-25089888-9 to be your site's ID. -->
+</body>
+</html>

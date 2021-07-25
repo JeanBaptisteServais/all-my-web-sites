@@ -1,0 +1,30 @@
+<div id="navbar-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-white fixed">
+        <div class="container">
+            <a class="navbar-brand nav-external" href="#home">Jb Servais</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'site_web' %}">Mes sites web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'projets' %}">Mes projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'conception' %}">Mes documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

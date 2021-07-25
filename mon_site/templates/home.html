@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr-fr">
+{% load static %}
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Merlin HTML/CSS template">
+    <meta name="author" content="Hasan Alibegic">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>JB</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" async defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" async defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" async defer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async defer>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" async defer>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    {% include 'layout/loader_overlay.html' %}
+    <section id="home" class="page overlay">
+        <div class="container">
+            <div class="content cover text-center">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="mt-0 mb-4 animated" data-animation="fadeInDown" data-delay="300">portfolio</h1>
+                        <a class="mt-0 mb-4 btn btn-blue" 
+                        data-animation="fadeIn" data-delay="900" href="https://github.com/JeanBaptisteServais">Github</a>
+                        <h3 class="mt-0 mb-0 animated hiding" data-animation="fadeIn" data-delay="600">Jean-Baptiste Servais.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'layout/navebarre.html' %}
+    {% include 'layout/second_nav_fichier.html' %}
+    <section id="work" class="page">
+        <div class="container">
+            <div class="content text-center">
+                <div class="heading">
+                    <h2 class="mt-0 mb-4">Mes softs-skill</h2>
+                    <div class="border"></div>
+                    <p class="mt-4 mb-0">Voici les compétences qui me définissent en images.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="portfolio">
+                            <ul class="filters list-inline">
+                                <li class="list-inline-item">
+                                    <a class="active" data-filter="*" href="#"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a data-filter=".photography" href="#"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a data-filter=".branding" href="#"></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a data-filter=".web" href="#"></a>
+                                </li>
+                            </ul>
+                            <ul class="items list-unstyled clearfix animated hiding mb-0" data-animation="">
+                                <li class="item branding">
+                                    <a href="" data-gall="" data-vbtype="" onclick="presentation_projeft('sérieux', '1')">
+                                        <img src="{% static 'img/work/skill/sérieux.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Sérieux</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                    <a href="" data-gall="" data-vbtype="" onclick="presentation_projeft('motivé', '1')">
+                                        <img src="{% static 'img/work/skill/motivé.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Motivé</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item branding">
+                                    <a href="" data-gall="" data-vbtype="" onclick="presentation_projeft('curieux', '1')">
+                                        <img src="{% static 'img/work/skill/curieux.jpg' %}" alt="">
+                                        <div class="overlay">
+                                            <span>Curieux</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                    <a href="" data-gall="" data-vbtype="" onclick="presentation_projeft('introvertis', '1')">
+                                        <img src="{% static 'img/work/skill/introvertis.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Introvertis</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                    <a href="" data-gall="" data-vbtype=""  onclick="presentation_projeft('maladroit', '1')">
+                                        <img src="{% static 'img/work/skill/maladroit.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Maladroit</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item web">
+                                    <a href="" data-gall="" data-vbtype="" onclick="presentation_projeft('équipe', '1')">
+                                        <img src="{% static 'img/work/skill/equipe.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Esprit d'équipe</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                    <a href="" data-gall="" data-vbtype="" onclick="presentation_projeft('conception', '1')">
+                                        <img src="{% static 'img/work/skill/conception.jpg' %}"  alt="">
+                                        <div class="overlay">
+                                            <span>Point à travailler: conception</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="item photography">
+                                  <a href="" data-gall="" data-vbtype="" onclick="presentation_projeft('conception', '1')">
+                                      <img src="{% static 'img/work/skill/stréssé.jpg' %}"  alt="">
+                                      <div class="overlay">
+                                          <span>Peur</span>
+                                      </div>
+                                  </a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="clients" class="page">
+        <div class="container">
+            <div class="content text-center">
+                <div class="row">
+                    <div class="col-sm-12 animated hiding" data-animation="fadeInDown">
+                        <div id="testimonials" class="carousel slide">
+                            <ol class="carousel-indicators">
+                                <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+                                <li data-target="#testimonials" data-slide-to="1" class=""></li>
+                                <li data-target="#testimonials" data-slide-to="2" class=""></li>
+                                <li data-target="#testimonials" data-slide-to="3" class=""></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active flex-column">
+                                    <p class="quote mb-4">Les sites web.</p>
+                                    <p class="client mb-5">Les requêtes http, applications, base de données....</p>
+                                </div>
+                                <div class="carousel-item flex-column">
+                                    <p class="quote mb-4">Vision par ordinateur.</p>
+                                    <p class="client mb-5">Détection des parties du corps, seuillage...</p>
+                                </div>
+                                <div class="carousel-item flex-column">
+                                    <p class="quote mb-4">Les tableaux.</p>
+                                    <p class="client mb-5">labyrinthe, carte...</p>
+                                </div>
+                                <div class="carousel-item flex-column">
+                                    <p class="quote mb-4">Les paths finding.</p>
+                                    <p class="client mb-5">A*, Algorithmes génétiques...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="page">
+        <div class="container">
+            <div class="content text-center">
+                <div class="heading">
+                    <h2 class="mt-0 mb-4">À propos.</h2>
+                    <div class="border"></div>
+                    <p class="mt-4 mb-0">Jeune développeur passionné, je cherche une alternance en Intelligence Artificielle.</p>
+                    <p class="mt-4 mb-0">J'aime regarder des documentaires, lire et jouer à Tetris.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12 teammate animated hiding" data-animation="fadeInLeft" data-delay="600">
+                        <div class="profile-photo">
+                            <img class="img-fluid" src="{% static 'img/work/1.jpg' %}" onclick="presentation_projeft('github', '2')">
+                        </div>
+                        <div class="bio mt-4" >
+                            <h5 class="mb-1">Github</h5>
+                            <p>Développeur</p>
+                            <div class="border mt-4 mb-4"></div>
+                            <p>
+                                Voici mon Github, c'est ici ou je stock mes projets. Attention, ils n'ont jamais été vérifiés et peuvent être faux.
+                                <a href="https://github.com/JeanBaptisteServais">Disponible ici: Github</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 teammate animated hiding" data-animation="fadeInUp" data-delay="300">
+                        <div class="profile-photo">
+                            <img class="img-fluid" src="{% static 'img/work/2.jpg' %}" onclick="presentation_projeft('codinggame', '2')" alt="">
+                        </div>
+                        <div class="bio mt-4">
+                            <h5 class="mb-1">Coding game</h5>
+                            <p>Développeur</p>
+                            <div class="border mt-4 mb-4"></div>
+                            <p>Voici mon coding game. C'est un site où l'on résout des exercices ainsi que des challenges !
+                                <a href="https://www.codingame.com/profile/55404e00923fb8e707471ed1c11bf33a0988763">Disponible ici: codinggame</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 teammate animated hiding" data-animation="fadeInUp" data-delay="300">
+                        <div class="profile-photo">
+                            <img class="img-fluid" src="{% static 'img/work/3.jpg' %}" onclick="presentation_projeft('cv', '2')" alt="">
+                        </div>
+                        <div class="bio mt-4">
+                            <h5 class="mb-1">Mon cv</h5>
+                            <p>Curriculum vitae</p>
+                            <div class="border mt-4 mb-4"></div>
+                            <p>Voici mon CV qui retrace ma scolarité. <a href="/conception#">Disponible ici</a></p>
+                        </div>
+                    </div>  
+                    <div class="col-md-3 col-sm-6 col-xs-12 teammate animated hiding" data-animation="fadeInRight" data-delay="600">
+                        <div class="profile-photo">
+                            <img class="img-fluid" src="{% static 'img/work/4.jpg' %}" onclick="presentation_projeft('motivation', '2')" alt="">
+                        </div>
+                        <div class="bio mt-4">
+                            <h5 class="mb-1">Motivation</h5>
+                            <p>Lettre de motivation</p>
+                            <div class="border mt-4 mb-4"></div>
+                            <p>Voici ma lettre de motivation, un peu générique mais elle me reflète un peu. <a href="/conception#">Disponible ici</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'layout/contact.html' %}
+    {% include 'layout/footer.html' %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.2/venobox.min.js"></script>
+    <script src="/static/js/script.js?v=1.0"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
