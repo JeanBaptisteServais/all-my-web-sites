@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
+			<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+			<link rel="stylesheet" type="text/css" href="{% static 'navebarre.css' %}" />
+            <link rel="stylesheet" type="text/css" href="{% static 'about.css' %}" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+			<title> Le caffé de paris </title>
+		</head>
+		<body>
+			<section class="masthead">
+				<center>
+					<div id="container_tilte_mastead">
+						<h1 id="titre_h1">Le Caffé de Paris</h1>
+						<p id="localisation">Rue de l'hôtel de VI à Crest</p>
+					</div>
+				</center>
+			</section>
+			{% include 'layout/navebarre.html' %}
+			<div class="separator"></div>
+			<section>
+				<center>
+                    <h1>A propos de nous</h1>
+                    <div class="separator"></div>
+                    <p id="paragraphe_about">
+                        Élément qui contient les données ainsi que de la logique en rapport avec les données : validation, lecture et enregistrement3. Il peut, dans sa forme la plus simple, contenir uniquement une simple valeur, ou une structure de données plus complexe4. Le modèle représente l'univers dans lequel s'inscrit l'application2. Par exemple pour une application de banque, le modèle représente des comptes, des clients, ainsi que les opérations telles que dépôt et retraits, et vérifie que les retraits ne dépassent pas la limite de crédit2.
+                        <br><br>
+                        En programmation informatique, un framework (appelé aussi infrastructure logicielle1, infrastructure de développement2, environnement de développement3, socle d'applications4, cadre d'applications4 ou cadriciel4) désigne un ensemble cohérent de composants logiciels structurels, qui sert à créer les fondations ainsi que les grandes lignes de tout ou d’une partie d'un logiciel (architecture). Un framework se distingue d'une simple bibliothèque logicielle principalement par :
+                        son caractère générique, faiblement spécialisé, contrairement à certaines bibliothèques;
+                        <br><br>
+                        un framework peut à ce titre être constitué de plusieurs bibliothèques, chacune spécialisée dans un domaine. Un framework peut néanmoins être spécialisé, sur un langage particulier, une plateforme spécifique, un domaine particulier : communication de données, data mapping, etc. ;
+                        le cadre de travail qu'il impose de par sa construction même, 
+                        <br><br>
+                        guidant l'architecture logicielle voire conduisant le développeur à respecter certains patrons de conception ; les bibliothèques le constituant sont alors organisées selon le même paradigme.
+                        Les frameworks sont donc conçus et utilisés pour modeler l'architecture des logiciels applicatifs, des applications web, des middlewares et des composants logiciels. Les frameworks sont acquis par les informaticiens, puis incorporés dans des logiciels applicatifs mis sur le marché, ils sont par conséquent rarement achetés et installés séparément par un utilisateur final.
+                        <br><br>
+                        Les frameworks sont donc conçus et utilisés pour modeler l'architecture des logiciels applicatifs,
+                    
+                    </p>
+                </center>
+			</section>
+			<div class="separator"></div>
+
+			<section id="carte">
+				<div class="separator"></div>
+				<div class="row">
+					<div class="col-sm">
+						<p id="card_see">VOIR NOTRE EQUIPE</p>
+						<p id="product">Voir nos produits, nos boissons, nos desserts.</p>
+						<p id="product">Du lundi au dimanche de 12h à 22h.</p>
+						<p id="product">Plat du jour: pizza.</p>
+					</div>
+					<div class="col-sm">
+						<div id="button_card"><a href="{% url 'equipe' %}">Voir l'équipe</a></div>
+					</div>
+				</div>
+			</section>
+			<section id="carte_responsive">
+				<div class="separator"></div>
+				<center>
+					<p id="card_see_res">VOIR NOTRE CARTE</p>
+					<p id="product_res">Voir nos produits, nos boissons, nos desserts. Du lundi au dimanche de 12h à 22h. Plat du jour: pizza.</p>
+					<div id="button_res_carte"><a href="{% url 'carte' %}">Voir la carte</a></div>
+				</center>
+				<div class="separator"></div>
+			</section>
+			{% include 'layout/footer.html' %}
+		</body>
+</html>
+
+
+<script>
+
+	const ratio = .1 // ratio (scroll / object y)
+
+	var options = {
+		root: null,
+		rootMargin: "0px",
+		threshold: .1 // object size
+	};
+
+	const paragraphe = function(entries, observer_paragraph){
+		entries.forEach(function (entry){
+			if (entry.intersectionRatio > ratio){
+				entry.target.classList.add("visible_top")
+			};
+		});
+	};
+
+	const observer_paragraph = new IntersectionObserver(paragraphe, options);
+	document.querySelectorAll(".paragraph").forEach(function (r) {
+		observer_paragraph.observe(r)
+	})
+
+
+</script>

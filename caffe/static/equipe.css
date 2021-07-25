@@ -1,0 +1,22 @@
+#equipe1, #equipe2, #equipe3, #equipe4, #equipe5{
+    margin:0;
+    padding:0;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    height:85vh;
+}
+#equipe1{
+    background: url("/static/img/equipe/a.jpg") no-repeat center; 
+}
+#equipe2{
+    background: url("/static/img/equipe/b.jpg") no-repeat center; 
+}
+#equipe3{
+    background: url("/static/img/equipe/c.jpg") no-repeat center; 
+}
+#equipe4{
+    background: url("/static/img/equipe/d.jpg") no-repeat center; 
+}
+#equipe5{
+    background: url("/static/img/equipe/e.jpg") no-repeat center; 
+}

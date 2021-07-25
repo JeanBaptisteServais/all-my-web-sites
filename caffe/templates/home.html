@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
+			<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+			<link rel="stylesheet" type="text/css" href="{% static 'navebarre.css' %}" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+			<title> Le caffé de paris </title>
+		</head>
+		<body>
+			<section class="masthead">
+				<center>
+					<div id="container_tilte_mastead">
+						<h1 id="titre_h1">Le Caffé de Paris</h1>
+						<p id="localisation">Rue de l'hôtel de VI à Crest</p>
+					</div>
+				</center>
+			</section>
+			{% include 'layout/navebarre.html' %}
+			<div class="separator"></div>
+			<section class="intro">
+				<div class="row row_menu">
+					<div class="col-lg-6 col-md-6 col-sm-12 paragraph" id="container_menu">
+						<h2>MENU</h2>
+						<p class="p_menu">
+							A progression of rare and beautiful ingredients where texture, flavour 
+							and harmony is paramount. Delve into the Quay dining experience with Peter 
+							Gilmore’s Menu and thoughtfully curated Wine List by Fink Wine Director, 
+							Amanda Yallop, and Quay Head Sommelier, Shanteh Wong.
+						</p>
+						<div class="read_more" onclick="window.location='/carte/'">Lire plus</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12" id="plat1"></div>
+				</div>
+				<div class="row" id="row_menu">
+					<div class="col-lg-6 col-md-6 col-sm-12" id="plat2"></div>
+					<div class="col-lg-6 col-md-6 col-sm-12 paragraph" id="container_menu">
+						<h2>L'ÉQUIPE</h2>
+						<p class="p_menu">
+							A progression of rare and beautiful ingredients where texture, flavour 
+							and harmony is paramount. Delve into the Quay dining experience with Peter 
+							Gilmore’s Menu and thoughtfully curated Wine List by Fink Wine Director, 
+							Amanda Yallop, and Quay Head Sommelier, Shanteh Wong.
+						</p>
+						<div class="read_more" onclick="window.location='/carte/'">Lire plus</div>
+					</div>
+				</div>
+			</section>
+			<section class="intro_responsive">
+				<center>
+					<h2>MENU</h2>
+					<p class="p_menu">
+						A progression of rare and beautiful ingredients where texture, flavour 
+						and harmony is paramount. Delve into the Quay dining experience with Peter 
+						Gilmore’s Menu and thoughtfully curated Wine List by Fink Wine Director, 
+						Amanda Yallop, and Quay Head Sommelier, Shanteh Wong.
+					</p>
+					<div class="read_more" onclick="window.location='/carte/'">Lire plus</div>
+					<div class="separator"></div>
+					<div class="col-lg-6 col-md-6 col-sm-12 res_intro" id="plat1"></div>
+					<div class="separator"></div>
+					<h2>L'ÉQUIPE</h2>
+					<p class="p_menu">
+						A progression of rare and beautiful ingredients where texture, flavour 
+						and harmony is paramount. Delve into the Quay dining experience with Peter 
+						Gilmore’s Menu and thoughtfully curated Wine List by Fink Wine Director, 
+						Amanda Yallop, and Quay Head Sommelier, Shanteh Wong.
+					</p>
+					<div class="read_more" onclick="window.location='/equipe'">Lire plus</div>
+					<div class="separator"></div>
+					<div class="col-lg-6 col-md-6 col-sm-12 res_intro" id="plat2"></div>
+				</center>
+			</section>
+			<div class="separator"></div>
+			<section id="some_plates">
+				<div class="container-fluid">
+					<div class="row row_menu">
+						<div class="col-lg-4 col-md-4 col-sm-12 grid" id="grid1">
+							<p class="titre_plat">Plat 1</p>
+							<div class="trait"></div>
+							<p class="resum">
+								To get in touch with the Quay team simply fill out the contact form below.
+								 Alternatively you can telephone us on 02 9251 5600 or email us at
+							</p>
+							<div class="button">Voir le produit</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 grid" id="grid2">
+							<p class="titre_plat">Plat 2</p>
+							<div class="trait"></div>
+							<p class="resum">
+								To get in touch with the Quay team simply fill out the contact form below.
+								 Alternatively you can telephone us on 02 9251 5600 or email us at
+							</p>
+							<div class="button">Voir le produit</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 grid" id="grid3">
+							<p class="titre_plat">Plat 3</p>
+							<div class="trait"></div>
+							<p class="resum">
+								To get in touch with the Quay team simply fill out the contact form below.
+								 Alternatively you can telephone us on 02 9251 5600 or email us at
+							</p>
+							<div class="button">Voir le produit</div>
+						</div>
+					</div>
+					<div class="row row_menu">
+						<div class="col-lg-4 col-md-4 col-sm-12 grid grid_col_2" id="grid4">
+							<p class="titre_plat">Plat 4</p>
+							<div class="trait"></div>
+							<div class="separator_p_h"></div>
+							<p class="resum">
+								To get in touch with the Quay team simply fill out the contact form below.
+								Alternatively you can telephone us on 02 9251 5600 or email us at
+								Alternatively you can telephone us on 02 9251 5600 or email us at
+							</p>
+							<div class="separator_p_h_10"></div>
+							<div class="button">Voir le produit</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 grid grid_col_2" id="grid5">
+							<p class="titre_plat">Plat 5</p>
+							<div class="trait"></div>
+							<div class="separator_p_h"></div>
+							<p class="resum">
+								To get in touch with the Quay team simply fill out the contact form below.
+								Alternatively you can telephone us on 02 9251 5600 or email us at
+								Alternatively you can telephone us on 02 9251 5600 or email us at
+							</p>
+							<div class="separator_p_h_10"></div>
+							<div class="button">Voir le produit</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 grid grid_col_2" id="grid6">
+							<p class="titre_plat">Plat 6</p>
+							<div class="trait"></div>
+							<div class="separator_p_h"></div>
+							<p class="resum">
+								To get in touch with the Quay team simply fill out the contact form below.
+								Alternatively you can telephone us on 02 9251 5600 or email us at
+								Alternatively you can telephone us on 02 9251 5600 or email us at
+							</p>
+							<div class="separator_p_h_10"></div>
+							<div class="button">Voir le produit</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="separator"></div>
+			<section id="carte">
+				<div class="separator"></div>
+				<div class="row">
+					<div class="col-sm">
+						<p id="card_see">VOIR NOTRE CARTE</p>
+						<p id="product">Voir nos produits, nos boissons, nos desserts.</p>
+						<p id="product">Du lundi au dimanche de 12h à 22h.</p>
+						<p id="product">Plat du jour: pizza.</p>
+					</div>
+					<div class="col-sm">
+						<div id="button_card"><a href="{% url 'carte' %}">Voir la carte</a></div>
+					</div>
+				</div>
+			</section>
+			<section id="carte_responsive">
+				<div class="separator"></div>
+				<center>
+					<p id="card_see_res">VOIR NOTRE CARTE</p>
+					<p id="product_res">Voir nos produits, nos boissons, nos desserts. Du lundi au dimanche de 12h à 22h. Plat du jour: pizza.</p>
+					<div id="button_res_carte"><a href="{% url 'carte' %}">Voir la carte</a></div>
+				</center>
+				<div class="separator"></div>
+			</section>
+			{% include 'layout/footer.html' %}
+		</body>
+</html>
+
+
+<script>
+
+	const ratio = .1 // ratio (scroll / object y)
+
+	var options = {
+		root: null,
+		rootMargin: "0px",
+		threshold: .1 // object size
+	};
+
+	const paragraphe = function(entries, observer_paragraph){
+		entries.forEach(function (entry){
+			if (entry.intersectionRatio > ratio){
+				entry.target.classList.add("visible_top")
+			};
+		});
+	};
+
+	const observer_paragraph = new IntersectionObserver(paragraphe, options);
+	document.querySelectorAll(".paragraph").forEach(function (r) {
+		observer_paragraph.observe(r)
+	})
+
+
+</script>

@@ -1,0 +1,86 @@
+{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+<div class="container-fluid navebarre">
+	<div class="row" id="row_navebarre">
+		<div class="sep_5px"></div>
+		<div class="col-lg-3 col-md-3"><h1 id="h1_navebarre"><a href="">Le caffé de Paris</a></h1></div>
+		<div class="col-lg-9 col-md-9" id="right_part_navebarre">
+			<ul class="ul_navebarre">
+				<li class="li_navebarre"><a href="{% url 'home' %}">Accueil</a></li>
+				<li class="li_navebarre"><a href="{% url 'about' %}">À propos</a></li>
+				<li class="li_navebarre"><a href="{% url 'carte' %}">Notre carte</a></li>
+				<li class="li_navebarre"><a href="{% url 'home' %}#footer_section2">Contacts</a></li>
+				<li class="li_navebarre"><a href="{% url 'equipe' %}">équipe</a></li>
+				<li class="li_navebarre"><a href="{% url 'reservation' %}">Réservation</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container-fluid container_navbarre">
+	<div id="logo_nav">
+		<div class="logo" id="logo_navebarre_open">
+			<div class="barre" id="barre1"></div>
+			<div class="barre" id="barre2"></div>
+			<div class="barre" id="barre3"></div>
+		</div>
+		<div class="logo" id="logo_navebarre_close">
+			<div class="barre_responsive" id="barre1_responsive"></div>
+			<div class="barre_responsive" id="barre2_responsive"></div>
+		</div>
+	</div>
+	<div class="row" id="navebarre_responsive">
+		<ul class="ul_navebarre_responsive">
+			<li class="li_navebarre_responsive"><a href="{% url 'home' %}">Accueil</a></li>
+			<li class="li_navebarre_responsive"><a href="{% url 'home' %}">À propos</a></li>
+			<li class="li_navebarre_responsive"><a href="{% url 'home' %}">Notre carte</a></li>
+			<li class="li_navebarre_responsive"><a href="{% url 'equipe' %}">équipe</a></li>
+			<li class="li_navebarre_responsive"><a href="{% url 'home' %}">Contacts</a></li>
+			<li class="li_navebarre_responsive" id="reservate"><a href="">Réservation</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+var click_on_logo = 0;
+
+
+function display(div){
+	var element = document.getElementById(div);
+	element.style.display = "block";
+}
+
+function undisplay(div){
+	var element = document.getElementById(div);
+	element.style.display = "none";
+}
+
+
+
+
+function replace_logo_navebarre(){
+
+	if (click_on_logo == 0){
+		click_on_logo++;
+		display("logo_navebarre_close");
+		undisplay("logo_navebarre_open");
+		document.getElementById("navebarre_responsive").classList.add("visible_navebarre");
+	}
+	else{
+		click_on_logo = 0
+		display("logo_navebarre_open");
+		undisplay("logo_navebarre_close");
+		document.getElementById("navebarre_responsive").classList.remove("visible_navebarre");
+	}
+}
+
+
+$(document).ready(function(){
+	$(".logo").click(function(){
+		replace_logo_navebarre();
+	});
+});
+</script>

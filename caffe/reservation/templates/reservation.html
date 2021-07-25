@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
+			<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+			<link rel="stylesheet" type="text/css" href="{% static 'navebarre.css' %}" />
+            <link rel="stylesheet" type="text/css" href="{% static 'reservation/reservation.css' %}" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+			<title> Le caffé de paris </title>
+		</head>
+		<body>
+			<section class="masthead">
+				<center>
+					<div id="container_tilte_mastead">
+						<h1 id="titre_h1">Le Caffé de Paris</h1>
+						<p id="localisation">Rue de l'hôtel de VI à Crest</p>
+					</div>
+				</center>
+			</section>
+   
+			{% include 'layout/navebarre.html' %}
+
+			<div class="separator"></div>
+            <div class="separator"></div>
+  
+			<section id="form_no_responsive">
+
+                <center>
+                    <div id="container_forms">
+
+                        <div class="black_bande"></div>
+
+                        <div class="separator"></div>
+
+                        <center>
+                            <h1>Réserver une table</h1>
+                        </center>
+
+                        <div class="separator_2vh"></div>
+                        <p id="info_forms">
+                            1. Saisir la date<br>
+                            2. Indiquer le nombre de personne<br>
+                            3. Saisissez votre numéro de téléphone<br>
+                            4. Saissisez votre nom de réservation<br>
+                            5. Et valider.
+                        </p>
+
+                        <div class="separator_2vh"></div>
+
+                        <form action="/reservation/" method="POST">
+                            {% csrf_token %}
+
+                            <div class="row">
+                                <div class="col-sm">
+                                    <center>
+                                        <div>
+                                            <input type="date" name="date" class="inputs" required>
+                                        </div>
+                                        <div class="sep_5px">
+                                            <input type="number" placeholder="Nombre de personne" name="number_person" class="inputs" required>
+                                        </div>
+                                        <div class="sep_5px">
+                                            <input type="text" placeholder="Votre numéro de téléphone" name="phone" class="inputs" required>
+                                        </div>
+                                        <div class="sep_5px">
+                                            <input type="text" placeholder="Votre nom de réservation" name="name_reservation" class="inputs" required>
+                                        </div>
+                                    </center>
+                                </div>
+
+                                <div class="col-sm">
+                                    <center>
+                                        <div>
+                                            <textarea id="message" placeholder="Un message" name="message"></textarea>
+                                        </div>
+                                        <div class="sep_5px">
+                                            <input type="submit" id="submit" class="inputs">
+                                        </div>
+                                    </center>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="separator_2vh"></div>
+                        <div class="separator"></div>
+
+                        <div class="row">
+                            <div class="col-sm"><center>caffedeparis@hotmal.fr</center></div>
+                            <div class="col-sm"><center>04 75 25 25 25</center></div>
+                            <div class="col-sm"><center>Rue de l'église Crest</center></div>
+                        </div>
+
+                        <div class="separator_2vh"></div>
+                        <div class="black_bande">
+                        </div>
+                    </div>
+                </center>
+			</section>
+			<div class="separator sep_top"></div>
+            <div class="separator sep_top"></div>
+
+			<center>
+				<section id="form_responsive">
+					<h1>Réserver une table</h1>
+					<p id="p_responsive">
+						1. Saisir la date<br>
+						2. Indiquer le nombre de personne<br>
+						3. Saisissez votre numéro de téléphone<br>
+						4. Saissisez votre nom de réservation<br>
+						5. Et valider.
+					</p>
+					<form action="/reservation/" method="POST" id="form_responsive">
+						{% csrf_token %}
+							<div>
+								<input type="date" name="date" class="inputs" required>
+							</div>
+							<div class="sep_10px">
+								<input type="number" placeholder="Nombre de personne" name="number_person" class="inputs" required>
+							</div>
+							<div class="sep_10px">
+								<input type="text" placeholder="Votre numéro de téléphone" name="phone" class="inputs" required>
+							</div>
+							<div class="sep_10px">
+								<input type="text" placeholder="Votre nom de réservation" name="name_reservation" class="inputs" required>
+							</div>
+							<div class="sep_10px">
+								<textarea id="message" placeholder="Un message" name="message"></textarea>
+							</div>
+							<div class="sep_10px">
+								<input type="submit" id="submit" class="inputs">
+							</div>
+					</form>
+					<div class="separator"></div>
+					<div class="row">
+						<div class="col-sm"><center>caffedeparis@hotmal.fr</center></div>
+						<div class="col-sm"><center>04 75 25 25 25</center></div>
+						<div class="col-sm"><center>Rue de l'église Crest</center></div>
+					</div>
+				</section>
+			</center>
+
+			<div class="separator"></div>
+
+
+
+			<section id="carte">
+				<div class="separator"></div>
+				<div class="row">
+					<div class="col-sm">
+						<p id="card_see">VOIR NOTRE CARTE</p>
+						<p id="product">Voir nos produits, nos boissons, nos desserts.</p>
+						<p id="product">Du lundi au dimanche de 12h à 22h.</p>
+						<p id="product">Plat du jour: pizza.</p>
+					</div>
+					<div class="col-sm">
+						<div id="button_card"><a href="{% url 'carte' %}">Voir la carte</a></div>
+					</div>
+				</div>
+			</section>
+			<section id="carte_responsive">
+				<div class="separator"></div>
+				<center>
+					<p id="card_see_res">VOIR NOTRE CARTE</p>
+					<p id="product_res">Voir nos produits, nos boissons, nos desserts. Du lundi au dimanche de 12h à 22h. Plat du jour: pizza.</p>
+					<div id="button_res_carte"><a href="{% url 'carte' %}">Voir la carte</a></div>
+				</center>
+				<div class="separator"></div>
+			</section>
+			{% include 'layout/footer.html' %}
+
+		</body>
+</html>
+
+
+<script>
+
+	const ratio = .1 // ratio (scroll / object y)
+
+	var options = {
+		root: null,
+		rootMargin: "0px",
+		threshold: .1 // object size
+	};
+
+	const paragraphe = function(entries, observer_paragraph){
+		entries.forEach(function (entry){
+			if (entry.intersectionRatio > ratio){
+				entry.target.classList.add("visible_top")
+			};
+		});
+	};
+
+	const observer_paragraph = new IntersectionObserver(paragraphe, options);
+	document.querySelectorAll(".paragraph").forEach(function (r) {
+		observer_paragraph.observe(r)
+	})
+
+
+</script>

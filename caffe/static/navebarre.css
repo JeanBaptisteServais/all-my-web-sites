@@ -1,0 +1,123 @@
+.ul_navebarre{
+    list-style: none;
+}
+.li_navebarre{
+    display:inline;
+    padding-right:1em;
+    cursor:pointer;
+}
+#right_part_navebarre{
+    float:right;
+    text-align:right;
+}
+#row_navebarre{
+    padding-top:30px;
+    position:relative;
+    z-index:100;
+}
+#h1_navebarre{
+    font-size:1.4em;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.sep_5px{
+    height:20px;
+}
+.navebarre{
+    background:rgb(0, 0, 0);
+    color:white;
+    position:sticky;
+    top: 0px;
+    height:15vh;
+    z-index:100;
+}
+.li_navebarre_responsive{
+    color:white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top:1em;
+    font-size:1.2em;
+}
+.ul_navebarre_responsive{
+    list-style: none;
+}
+.container_navbarre{
+    display:none;
+    position:fixed;
+    top:1em;
+    left:1em;
+    z-index:100;
+}
+#navebarre_responsive{
+    display:block;
+    width:350px;
+    padding:1em;
+    transition:1s;
+    transform: translateX(-250px);
+}
+#reservate{
+    border:3px solid white;
+    padding:5px;
+    display:inline-block;
+}
+.visible_navebarre{
+    transform: translateX(-20px)!important;
+}
+#logo_nav{
+    height:50px;
+    width:50px;
+    border:1px solid transparent;
+}
+#logo_navebarre_open{
+    cursor: pointer;
+}
+#logo_navebarre_open:hover #barre1{
+    width:35px;
+    transform: translateX(2px);
+}
+#logo_navebarre_open:hover #barre3{
+    width:35px;
+    transform: translateX(2px);
+}
+#logo_navebarre_open:hover #barre2{
+    width:30px;
+    transform: translateX(5px);
+}
+#logo_navebarre_close{
+    display:none;
+    margin-top:20px;
+    cursor:pointer;
+    height:26px;
+}
+.barre{
+    border:1px solid white;
+    height:1px;
+    margin-top:10px;
+    width:40px;
+    transition:0.1s;
+}
+.barre_responsive{
+    position:absolute;
+    border:1px solid white;
+    height:1px;
+    width:30px;
+    transition:0.1s;
+}
+#barre1_responsive{
+    transform: skewY(-40deg);
+}
+#barre2_responsive{
+    transform: skewY(40deg);
+}
+@media (min-width: 0px) and (max-width: 859px) { 
+    .navebarre{
+        display:none;
+    }
+    .container_navbarre{
+        display:block;
+    }
+}
+a{
+    text-decoration: none!important;
+    color:white!important;
+}
